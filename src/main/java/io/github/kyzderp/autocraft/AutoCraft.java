@@ -22,7 +22,7 @@ import org.lwjgl.input.Keyboard;
 
 public class AutoCraft extends LabyModAddon {
 
-	public static final String VERSION = "1.4.0";
+	public static final String VERSION = "2.0.0";
 	public static final String PREFIX = "§2[§aAutoCraft§2] §r";
 	private static AutoCraft autoCraft;
 
