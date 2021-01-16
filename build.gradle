@@ -15,8 +15,7 @@ buildscript {
 apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: "de.undercouch.download"
 
-version = "1.4.0"
-group = "io.github.kyzderp.autocraftmod"
+group = "io.github.kyzderp.autocraft"
 archivesBaseName = "autocraft"
 
 minecraft {
