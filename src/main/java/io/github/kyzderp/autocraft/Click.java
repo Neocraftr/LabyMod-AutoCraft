@@ -1,20 +1,18 @@
-package io.github.kyzderp.autocraftmod;
-
-import net.minecraft.inventory.ClickType;
+package io.github.kyzderp.autocraft;
 
 public class Click 
 {
 	private int windowID;
 	private int slot;
 	private int data;
-	private ClickType action;
+	private int action;
 	
 	public int getWindowID() { return windowID; }
 	public int getSlot() { return slot;	}
 	public int getData() { return data; }
-	public ClickType getAction() { return action;	}
+	public int getAction() { return action;	}
 
-	public Click(int windowID, int slot, int data, ClickType action)
+	public Click(int windowID, int slot, int data, int action)
 	{
 		this.windowID = windowID;
 		this.slot = slot;

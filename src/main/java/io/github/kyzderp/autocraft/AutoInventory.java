@@ -1,4 +1,4 @@
-package io.github.kyzderp.autocraftmod;
+package io.github.kyzderp.autocraft;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 import net.minecraft.client.Minecraft;
-import net.minecraft.inventory.ClickType;
 import net.minecraft.inventory.ContainerPlayer;
 import net.minecraft.inventory.Slot;
 import net.minecraft.item.Item;
@@ -19,13 +18,13 @@ public class AutoInventory
 	private int[] stored;
 	private int[] meta;
 	private String output;
-	private LiteModAutoCraft main;
+	private AutoCraft main;
 	private int durabilityRepair;
 	private LinkedList<Click> toSend;
 	
 	private Simulator simulator;
 
-	public AutoInventory(LiteModAutoCraft main)
+	public AutoInventory(AutoCraft main)
 	{
 		this.inv = (ContainerPlayer) Minecraft.getMinecraft().thePlayer.inventoryContainer;
 		this.toSend = new LinkedList<Click>();
@@ -245,7 +244,7 @@ public class AutoInventory
 			if (!((Slot)this.inv.inventorySlots.get(i)).getHasStack())
 			{
 				Minecraft.getMinecraft().playerController.windowClick(this.inv.windowId,
-						i, 0, ClickType.PICKUP, Minecraft.getMinecraft().thePlayer);
+						i, 0, 0, Minecraft.getMinecraft().thePlayer);
 				return;
 			}
 		}
@@ -256,7 +255,7 @@ public class AutoInventory
 			if (!((Slot)this.inv.inventorySlots.get(i)).getHasStack())
 			{
 				Minecraft.getMinecraft().playerController.windowClick(this.inv.windowId,
-						i, 0, ClickType.PICKUP, Minecraft.getMinecraft().thePlayer);
+						i, 0, 0, Minecraft.getMinecraft().thePlayer);
 				return;
 			}
 		}
@@ -340,21 +339,21 @@ public class AutoInventory
 
 	private void shiftClick(int slot)
 	{
-		this.toSend.addLast(new Click(this.inv.windowId, slot, 0, ClickType.QUICK_MOVE));
+		this.toSend.addLast(new Click(this.inv.windowId, slot, 0, 1));
 		if (this.simulator != null)
 			this.simulator.shiftClick(slot);
 	}
 
 	private void click(int slot)
 	{
-		this.toSend.addLast(new Click(this.inv.windowId, slot, 0, ClickType.PICKUP));
+		this.toSend.addLast(new Click(this.inv.windowId, slot, 0, 0));
 		if (this.simulator != null)
 			this.simulator.leftClick(slot);
 	}
 
 	private void rightClick(int slot)
 	{
-		this.toSend.addLast(new Click(this.inv.windowId, slot, 1, ClickType.PICKUP));
+		this.toSend.addLast(new Click(this.inv.windowId, slot, 1, 0));
 		if (this.simulator != null)
 			this.simulator.rightClick(slot);
 	}

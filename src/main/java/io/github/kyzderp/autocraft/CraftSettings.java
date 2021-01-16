@@ -1,4 +1,4 @@
-package io.github.kyzderp.autocraftmod;
+package io.github.kyzderp.autocraft;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,15 +7,12 @@ import java.util.Scanner;
 
 import net.minecraft.client.Minecraft;
 
-import com.mumfrey.liteloader.util.log.LiteLoaderLogger;
-
 public class CraftSettings 
 {
 	private final int defaultCooldown = 2;
 	private int maxClickCooldown;
 	
-	private final File dirs = new File(Minecraft.getMinecraft().mcDataDir, "liteconfig" + File.separator 
-			+ "config.1.8" + File.separator + "AutoCraft");
+	private final File dirs = new File(Minecraft.getMinecraft().mcDataDir, "config" + File.separator + "AutoCraft");
 	private final File path = new File(dirs.getPath() + File.separator + "autocraftconfig.txt");
 
 	
@@ -27,14 +24,14 @@ public class CraftSettings
 		{
 			this.dirs.mkdirs();
 			if (!this.writeFile())
-				LiteLoaderLogger.warning("Cannot write to file!");
+				System.out.println("[AutoCraft] Cannot write to file!");
 			else
-				LiteLoaderLogger.info("Created new AutoCraft configuration file.");
+				System.out.println("[AutoCraft] Created new configuration file.");
 		}
 		if (!this.loadFile())
-			LiteLoaderLogger.warning("Cannot read from file!");
+			System.out.println("[AutoCraft] Cannot read from file!");
 		else
-			LiteLoaderLogger.info("AutoCraft configuration loaded.");
+			System.out.println("[AutoCraft] Configuration loaded.");
 	}
 	
 	private boolean writeFile()

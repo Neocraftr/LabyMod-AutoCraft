@@ -1,4 +1,4 @@
-package io.github.kyzderp.autocraftmod;
+package io.github.kyzderp.autocraft;
 
 import java.util.List;
 
