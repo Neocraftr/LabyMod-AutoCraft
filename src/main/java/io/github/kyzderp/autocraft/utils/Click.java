@@ -1,4 +1,4 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.utils;
 
 public class Click 
 {

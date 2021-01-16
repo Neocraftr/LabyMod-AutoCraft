@@ -1,4 +1,4 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.utils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,6 +6,7 @@ import java.util.Comparator;
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import io.github.kyzderp.autocraft.main.AutoCraft;
 import net.minecraft.client.Minecraft;
 import net.minecraft.inventory.ContainerPlayer;
 import net.minecraft.inventory.Slot;

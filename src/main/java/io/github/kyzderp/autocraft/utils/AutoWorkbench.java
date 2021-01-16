@@ -1,8 +1,9 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.utils;
 
 import java.util.HashMap;
 import java.util.LinkedList;
 
+import io.github.kyzderp.autocraft.main.AutoCraft;
 import net.minecraft.client.Minecraft;
 import net.minecraft.inventory.ContainerWorkbench;
 import net.minecraft.inventory.Slot;

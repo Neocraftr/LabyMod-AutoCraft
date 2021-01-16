@@ -1,10 +1,15 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.main;
 
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import io.github.kyzderp.autocraft.settings.Settings;
+import io.github.kyzderp.autocraft.utils.AutoInventory;
+import io.github.kyzderp.autocraft.utils.AutoWorkbench;
+import io.github.kyzderp.autocraft.utils.Click;
+import io.github.kyzderp.autocraft.utils.Updater;
 import net.labymod.addon.AddonLoader;
 import net.labymod.api.LabyModAddon;
 import net.labymod.settings.elements.SettingsElement;
@@ -23,7 +28,6 @@ import org.lwjgl.input.Keyboard;
 public class AutoCraft extends LabyModAddon {
 
 	public static final String VERSION = "2.0.0";
-	public static final String PREFIX = "§2[§aAutoCraft§2] §r";
 	private static AutoCraft autoCraft;
 
 	private AutoInventory autoInv;

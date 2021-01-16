@@ -1,10 +1,11 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.utils;
 
 import com.google.common.io.Resources;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import com.google.gson.JsonSyntaxException;
+import io.github.kyzderp.autocraft.main.AutoCraft;
 import org.apache.commons.io.FileUtils;
 
 import java.io.BufferedReader;

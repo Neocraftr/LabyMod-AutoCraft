@@ -1,6 +1,7 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.settings;
 
 import com.google.gson.JsonObject;
+import io.github.kyzderp.autocraft.main.AutoCraft;
 import net.labymod.settings.elements.BooleanElement;
 import net.labymod.settings.elements.ControlElement;
 import net.labymod.settings.elements.NumberElement;
@@ -56,7 +57,7 @@ public class Settings {
 
     private void updateInfoText() {
         String text = "§7GitHub: §ahttps://github.com/Neocraftr/AutoCraftMod/\n";
-        text += "§7Version: §a"+AutoCraft.VERSION;
+        text += "§7Version: §a"+ AutoCraft.VERSION;
         if(AutoCraft.getAutoCraft().getUpdater().isUpdatePending()) {
             text += " §c(Update ausstehend. Neustart erforderlich)";
         } else if(AutoCraft.getAutoCraft().getUpdater().isUpdateAvailable()) {

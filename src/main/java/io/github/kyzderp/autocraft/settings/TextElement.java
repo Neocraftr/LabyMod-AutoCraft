@@ -1,4 +1,4 @@
-package io.github.kyzderp.autocraft;
+package io.github.kyzderp.autocraft.settings;
 
 import net.labymod.main.LabyMod;
 import net.labymod.settings.elements.SettingsElement;
