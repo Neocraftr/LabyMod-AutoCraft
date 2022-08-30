@@ -27,7 +27,7 @@ import org.lwjgl.input.Keyboard;
 
 public class AutoCraft extends LabyModAddon {
 
-	public static final String VERSION = "2.0.0";
+	public static final String VERSION = "2.0.1";
 	private static AutoCraft autoCraft;
 
 	private AutoInventory autoInv;
