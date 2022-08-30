@@ -5,5 +5,6 @@
   "description": "A LabyMod addon to automate the crafting process",
   "version": 1,
   "category": 2,
-  "mainClass": "io.github.kyzderp.autocraft.main.AutoCraft"
+  "mainClass": "io.github.kyzderp.autocraft.main.AutoCraft",
+  "icon": "https://raw.githubusercontent.com/Neocraftr/LabyMod-AutoCraft/master/icons/AutoCraft.png"
 }

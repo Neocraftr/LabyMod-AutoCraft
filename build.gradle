@@ -16,7 +16,7 @@ apply plugin: "net.minecraftforge.gradle.forge"
 apply plugin: "de.undercouch.download"
 
 group = "io.github.kyzderp.autocraft"
-archivesBaseName = "autocraft"
+archivesBaseName = "AutoCraft"
 
 minecraft {
     version = "1.8.9-11.15.1.1855"

@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets;
 
 public class Updater {
 
-    private static final String UPDATE_URL = "https://api.github.com/repos/Neocraftr/AutoCraftMod/releases/latest";
+    private static final String UPDATE_URL = "https://api.github.com/repos/Neocraftr/LabyMod-AutoCraft/releases/latest";
 
     private boolean updateAvailable = false;
     private String downloadUrl = null;
